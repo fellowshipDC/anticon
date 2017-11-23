@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "gire-fellow"
+    "name": "anticon-forzada"
   },
   "apps": [
     {
@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.styl"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -51,7 +51,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "styl",
     "component": {}
   }
 }

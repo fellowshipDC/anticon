@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class GireFellowPage {
+export class AnticonForzadaPage {
   navigateTo() {
     return browser.get('/');
   }
