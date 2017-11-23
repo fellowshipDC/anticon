@@ -1,6 +1,26 @@
 var ObjectId = require('mongodb').ObjectID;
 
 var self = module.exports = {
+  find: (params) => {
+    return new Promise((resolve, reject) => {
+
+      var query = {};
+      var projection = {};
+
+      Testimonies.native((err, collection) => {
+        if(err)
+          return reject({ error : true, messsage : "Error Interno", status : 500 ,  err: err});
+
+        collection.find(query, projection).toArray((err, docs) => {
+          if(err)
+            return reject({ error : true, messsage : "Error Interno", status : 500, err: err});
+          return resolve(docs);
+        });
+
+      });
+
+    });
+  },
   create : function(params) {
     return new Promise(function (resolve, reject) {
       Testimonies.native(function (err, collection) {

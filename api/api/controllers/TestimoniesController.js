@@ -11,6 +11,24 @@ module.exports = {
 
   /**
    * This function save the testimony data in the database
+   * @returns {array} res
+   * @throws {}
+   * @todo
+   **/
+
+  getTestimonies: (req, res) => {
+    var params = sanitize(req.params.all());
+
+    TestimoniesService.find(params).then((result) => {
+      return res.send(result);
+    }).catch((err) => {
+      sails.log.error(err);
+      return res.send(err)
+    });
+  },
+
+  /**
+   * This function save the testimony data in the database
    * @param {string} state
    * @param {string} municipality
    * @param {string} date
