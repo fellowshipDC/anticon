@@ -1,3 +1,2 @@
-# api
-
-a [Sails](http://sailsjs.org) application
+# Run back
+source env.testimonios; node app.js

@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,8 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+  'GET  /api/v1/testimonies'  : 'TestimoniesController.getTestimonies',
+  'POST /api/v1/testimonies'  : 'TestimoniesController.create'
 
 };
