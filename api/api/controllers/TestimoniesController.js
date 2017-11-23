@@ -1,14 +1,14 @@
 /**
- * FormController
+ * TestimoniesController
  *
- * @description :: Server-side logic for managing forms
+ * @description :: Server-side logic for managing testimonies
  *
  */
 var sanitize = require('mongo-sanitize');
 
 module.exports = {
   /**
-   * This function save the form data in the database
+   * This function save the testimony data in the database
    * @param {string} name
    * @param {int} age
    * @returns {}
@@ -19,7 +19,7 @@ module.exports = {
   create : function(req, res){
     var params = sanitize(req.params.all());
 
-    FormService.create(params).then(function(result){
+    TestimoniesService.create(params).then(function(result){
       return res.json(result);
     }).catch(function(err){
       sails.log.error(err);

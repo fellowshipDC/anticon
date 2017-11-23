@@ -46,6 +46,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'POST /api/v1/form' : 'FormController.create'
+  'POST /api/v1/testimonies' : 'TestimoniesController.create'
 
 };

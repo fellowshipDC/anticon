@@ -3,17 +3,17 @@ var ObjectId = require('mongodb').ObjectID;
 var self = module.exports = {
   create : function(params){
     return new Promise(function (resolve, reject){
-      Form.native(function (err, collection){
+      Testimonies.native(function (err, collection){
         if(err){
           sails.log.error(err);
-          reject({status:500, error: true, location:"FormService.create: Native. Collection Form", message:"Ocurrió un error interno, por favor intente más tarde", info:err});
+          reject({status:500, error: true, location:"TestimoniesService.create: Native. Collection Testimonies", message:"Ocurrió un error interno, por favor intente más tarde", info:err});
         }
         var query = self.createQuery(params);
 
         collection.insertOne(query, function(err, result){
           if(err){
             sails.log.error(err);
-            reject({status:500, error:true, location:"FormService.create: Error in insertOne", message:"Ocurrió un error al guardar el formulario", info:err});
+            reject({status:500, error:true, location:"TestimoniesService.create: Error in insertOne", message:"Ocurrió un error al guardar el testimonio", info:err});
           }
           resolve(result.ops[0]);
         });
