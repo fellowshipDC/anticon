@@ -6,6 +6,9 @@
   
   h1 {
     font-size: 20px;
+    font-family: Arial, serif;
+    color:green;
+
   }
   
   form, [ngForm], ngForm, [ng-reflect-form], [ngModelGroup], [formGroupName], [formArrayName] {
@@ -17,6 +20,7 @@
   }
   
   label {
+    color:	#FFFFFF;
     display: inline-block;
     width: 150px;
     margin-left: 10px;
@@ -46,8 +50,17 @@
     color:green;
   }
   
+  .contenedor {
+    background-color:#b0c4de;
+    margin:0 auto;
+    padding:1em;
+  }
+  
   p {
     margin-left: 10px;
+    font-family: Montserrat, serif;
+    font-weight: 400;
+    color:#a6a6a6;
   }
   
   pre {
@@ -93,4 +106,14 @@
     padding-left: 18px;
     margin-left: 148px;
     margin-bottom: 5px;
+  }
+
+  .advertencia
+  {
+    color:black;
+  } 
+
+  img {
+    width: 100%;
+    height: auto;
   }
